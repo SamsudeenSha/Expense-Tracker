@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: lavenderblush;
+}
+
+.moneyplus{
+    color: green;
+}
+
+.moneyminus {
+    color: red;
+}
+
+.container {
+    margin: 30px auto;
+    width: 350px;
+    box-shadow: 3px;
+  }
+
+
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  
+  .list li {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .list li.plus {
+    border-right: 5px solid #2ecc71;
+  }
+  
+  .list li.minus {
+    border-right: 5px solid #c0392b;
+  }
+  
+  .del-button {
+    cursor: pointer;
+    background-color: lightpink;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .list li:hover .delete-btn {
+    opacity: 1;
+  }
+
+  .btn {
+    cursor: pointer;
+    background-color: #9c88ff;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
+  }
+  .btn:hover {
+    background-color: greenyellow;
+  }
+  .del-button:focus,
+  .del-button:focus {
+    outline: 0;
+  }
+  .del-button:hover {
+    background-color: #9c88ff;
+  }
+  @media (max-width: 320px) {
+    .container {
+      width: 300px;
+    }
+  }
+
+  .inc-exp-container {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .inc-exp-container > div:first-of-type {
+    border-right: 1px solid #dedede;
+  }
+
+  input {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #007bff; /* Change to your desired focus color */
+    box-shadow: 0 0 5px #007bff; /* Add a box shadow when focused */
+    outline: none; /* Remove the default outline on focus */
+  }
+
+
+  @keyframes lights {
+    0% {
+      color: hsl(231, 75%, 54%);
+      text-shadow:
+        0 0 1em hsla(320, 81%, 41%, 0.2),
+        0 0 0.125em hsla(320, 58%, 33%, 0.3),
+        -1em -0.125em 0.5em hsla(40, 79%, 47%, 0),
+        1em 0.125em 0.5em hsla(200, 52%, 37%, 0);
+    }
+    
+    30% { 
+      color: hsl(130, 67%, 63%);
+      text-shadow:
+        0 0 1em hsla(320, 80%, 44%, 0.5),
+        0 0 0.125em hsla(320, 79%, 17%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 92%, 24%, 0.2),
+        0.5em 0.125em 0.25em hsla(12, 81%, 45%, 0.4);
+    }
+    
+    40% { 
+      color: hsl(288, 82%, 59%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    70% {
+      color: hsl(167, 52%, 45%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+    
+    100% {
+      color: hsl(231, 83%, 43%);
+      text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.2),
+        0 0 0.125em hsla(320, 100%, 60%, 0.3),
+        1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+        -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+    
+  }
+    
+  h1 {
+    margin: auto;
+    animation: lights 5s 750ms linear infinite;
+  }
